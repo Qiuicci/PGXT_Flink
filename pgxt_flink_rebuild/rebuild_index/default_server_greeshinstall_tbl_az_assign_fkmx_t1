@@ -1,0 +1,84 @@
+
+
+  PUT default_server_greeshinstall_tbl_az_assign_fkmx_t1
+  {
+    "aliases" : {
+      "default_server_greeshinstall_tbl_az_assign_fkmx" : { }
+    },  
+	"settings": {
+    "index": {
+      "refresh_interval": "100ms",
+	  "max_result_window":10000000,
+      "number_of_shards" : "12",
+      "number_of_replicas" : "1",
+      "search.slowlog.threshold.query.warn": "5s",
+      "search.slowlog.threshold.query.info": "1s",
+      "search.slowlog.threshold.fetch.warn": "1s",
+      "search.slowlog.threshold.fetch.info": "800ms",
+      "indexing.slowlog.threshold.index.warn": "12s",
+      "indexing.slowlog.threshold.index.info": "5s"
+    }
+  },
+   "mappings" : {
+      "_doc" : {
+        "properties" : {
+          "cjdt" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+          },
+          "created_by" : {
+            "type" : "keyword"
+          },
+          "created_date" : {
+            "type" : "keyword"
+          },
+          "fkid" : {
+            "type" : "keyword"
+          },
+          "fkjg" : {
+            "type" : "keyword"
+          },
+          "fklb" : {
+            "type" : "keyword"
+          },
+          "fknr" : {
+            "type" : "keyword"
+          },
+          "fkren" : {
+            "type" : "keyword"
+          },
+          "fkrenmc" : {
+            "type" : "keyword"
+          },
+          "fksj" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+          },
+          "last_modified_by" : {
+            "type" : "keyword"
+          },
+          "last_modified_date" : {
+            "type" : "keyword"
+          },
+          "pgguid" : {
+            "type" : "keyword"
+          },
+          "wdmc" : {
+            "type" : "keyword"
+          },
+          "wdno" : {
+            "type" : "keyword"
+          },
+          "xtwdbh" : {
+            "type" : "keyword"
+          },
+          "ts" : {
+            "type" : "keyword"
+          },
+          "table" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+}

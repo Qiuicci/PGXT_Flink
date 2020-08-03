@@ -1,0 +1,535 @@
+
+
+  PUT wx_export_data_all_orders_v3
+  {
+    "aliases" : {
+      "wx_export_data_all_orders" : { }
+    },  
+	"settings": {
+    "index": {
+      "refresh_interval": "100ms",
+	  "max_result_window":10000000,
+      "number_of_shards" : "12",
+      "number_of_replicas" : "1",
+      "search.slowlog.threshold.query.warn": "5s",
+      "search.slowlog.threshold.query.info": "1s",
+      "search.slowlog.threshold.fetch.warn": "1s",
+      "search.slowlog.threshold.fetch.info": "800ms",
+      "indexing.slowlog.threshold.index.warn": "12s",
+      "indexing.slowlog.threshold.index.info": "5s"
+    }
+  },
+   "mappings" : {
+      "_doc" : {
+        "properties" : {
+          "appointmentjssj" : {
+            "type" : "keyword"
+          },
+          "appointmentkssj" : {
+            "type" : "keyword"
+          },
+          "assignFeedBackCzren" : {
+            "type" : "keyword"
+          },
+          "assignFeedBackCzsj" : {
+            "type" : "keyword"
+          },
+          "assignFeedBackId" : {
+            "type" : "keyword"
+          },
+          "assignFeedBackZlfkbh" : {
+            "type" : "keyword"
+          },
+          "assignFeedBackZlfksj" : {
+            "type" : "keyword"
+          },
+          "assignFkmxDuanXinTime" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkid" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkjg" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFklb" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkmxguid" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFknr" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkren" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkrenmc" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFksj" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkwdmc" : {
+            "type" : "keyword"
+          },
+          "assignFkmxFkwdno" : {
+            "type" : "keyword"
+          },
+          "assignFkmxQqlyxh" : {
+            "type" : "keyword"
+          },
+          "assignFkmxScid" : {
+            "type" : "keyword"
+          },
+          "assignFkmxScwj" : {
+            "type" : "keyword"
+          },
+          "assignFkmxWjid" : {
+            "type" : "keyword"
+          },
+          "assignMxBeiz" : {
+            "type" : "keyword"
+          },
+          "assignMxCzren" : {
+            "type" : "keyword"
+          },
+          "assignMxCzsj" : {
+            "type" : "keyword"
+          },
+          "assignMxCzwd" : {
+            "type" : "keyword"
+          },
+          "assignMxFee" : {
+            "type" : "double"
+          },
+          "assignMxFwdw" : {
+            "type" : "keyword"
+          },
+          "assignMxFwdwdh" : {
+            "type" : "keyword"
+          },
+          "assignMxGmsj" : {
+            "type" : "keyword"
+          },
+          "assignMxGzwz" : {
+            "type" : "keyword"
+          },
+          "assignMxGzxx" : {
+            "type" : "keyword"
+          },
+          "assignMxGzxxid" : {
+            "type" : "keyword"
+          },
+          "assignMxHsqk" : {
+            "type" : "keyword"
+          },
+          "assignMxJxid" : {
+            "type" : "keyword"
+          },
+          "assignMxJxmc" : {
+            "type" : "keyword"
+          },
+          "assignMxJxno" : {
+            "type" : "keyword"
+          },
+          "assignMxNjtm" : {
+            "type" : "keyword"
+          },
+          "assignMxNjtm2" : {
+            "type" : "keyword"
+          },
+          "assignMxPgmxid" : {
+            "type" : "keyword"
+          },
+          "assignMxPinpai" : {
+            "type" : "keyword"
+          },
+          "assignMxQqlyxh" : {
+            "type" : "keyword"
+          },
+          "assignMxShul" : {
+            "type" : "long"
+          },
+          "assignMxSpid" : {
+            "type" : "keyword"
+          },
+          "assignMxSpmc" : {
+            "type" : "keyword"
+          },
+          "assignMxWjtm" : {
+            "type" : "keyword"
+          },
+          "assignMxWwsl" : {
+            "type" : "keyword"
+          },
+          "assignMxXiid" : {
+            "type" : "keyword"
+          },
+          "assignMxXimc" : {
+            "type" : "keyword"
+          },
+          "assignMxXlid" : {
+            "type" : "keyword"
+          },
+          "assignMxXlmc" : {
+            "type" : "keyword"
+          },
+          "assignMxXsdw" : {
+            "type" : "keyword"
+          },
+          "assignMxXsdwdh" : {
+            "type" : "keyword"
+          },
+          "assignMxXxfee" : {
+            "type" : "double"
+          },
+          "assignSatisfactionBmybeiz" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionBmylx" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionBmysj" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionHfren" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionHfsj" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionHfwdmc" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionHfwdno" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionId" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionMydlx" : {
+            "type" : "long"
+          },
+          "assignSatisfactionPjly" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionPjnr" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionSplb" : {
+            "type" : "keyword"
+          },
+          "assignSatisfactionSxlx" : {
+            "type" : "keyword"
+          },
+          "auth_state" : {
+            "type" : "keyword"
+          },
+          "azsl" : {
+            "type" : "long"
+          },
+          "beiz" : {
+            "type" : "keyword"
+          },
+          "bjustat" : {
+            "type" : "long"
+          },
+          "chaoshiqe" : {
+            "type" : "keyword"
+          },
+          "chaoshitime" : {
+            "type" : "keyword"
+          },
+          "cjdt" : {
+            "type" : "keyword"
+          },
+          "cjren" : {
+            "type" : "keyword"
+          },
+          "cjrmc" : {
+            "type" : "keyword"
+          },
+          "cjwdno" : {
+            "type" : "keyword"
+          },
+          "created_by" : {
+            "type" : "keyword"
+          },
+          "created_date" : {
+            "type" : "keyword"
+          },
+          "cshi" : {
+            "type" : "keyword"
+          },
+          "cshiid" : {
+            "type" : "keyword"
+          },
+          "cxyzm" : {
+            "type" : "keyword"
+          },
+          "dhhm" : {
+            "type" : "keyword"
+          },
+          "dizi" : {
+            "type" : "keyword"
+          },
+          "dqjdsj" : {
+            "type" : "keyword"
+          },
+          "email" : {
+            "type" : "keyword"
+          },
+          "fjhm" : {
+            "type" : "keyword"
+          },
+          "fwrybwgsj" : {
+            "type" : "keyword"
+          },
+          "gdhao" : {
+            "type" : "keyword"
+          },
+          "gpsdzxx" : {
+            "type" : "keyword"
+          },
+          "jindu" : {
+            "type" : "keyword"
+          },
+          "last_modified_by" : {
+            "type" : "keyword"
+          },
+          "last_modified_date" : {
+            "type" : "keyword"
+          },
+          "ldcs" : {
+            "type" : "long"
+          },
+          "level1" : {
+            "type" : "keyword"
+          },
+          "level10" : {
+            "type" : "keyword"
+          },
+          "level11" : {
+            "type" : "keyword"
+          },
+          "level12" : {
+            "type" : "keyword"
+          },
+          "level13" : {
+            "type" : "keyword"
+          },
+          "level14" : {
+            "type" : "keyword"
+          },
+          "level2" : {
+            "type" : "keyword"
+          },
+          "level3" : {
+            "type" : "keyword"
+          },
+          "level4" : {
+            "type" : "keyword"
+          },
+          "level5" : {
+            "type" : "keyword"
+          },
+          "level6" : {
+            "type" : "keyword"
+          },
+          "level7" : {
+            "type" : "keyword"
+          },
+          "level8" : {
+            "type" : "keyword"
+          },
+          "level9" : {
+            "type" : "keyword"
+          },
+          "pgguid" : {
+            "type" : "keyword"
+          },
+          "pgid" : {
+            "type" : "long"
+          },
+          "qqlymc" : {
+            "type" : "keyword"
+          },
+          "qqlyxh" : {
+            "type" : "keyword"
+          },
+          "qqlyzj" : {
+            "type" : "keyword"
+          },
+          "quhao" : {
+            "type" : "keyword"
+          },
+          "qwsmjssj" : {
+            "type" : "keyword"
+          },
+          "qystat" : {
+            "type" : "keyword"
+          },
+          "sfen" : {
+            "type" : "keyword"
+          },
+          "sfenid" : {
+            "type" : "keyword"
+          },
+          "sffswx" : {
+            "type" : "keyword"
+          },
+          "shijiwangongtime" : {
+            "type" : "keyword"
+          },
+          "spid" : {
+            "type" : "keyword"
+          },
+          "spmc" : {
+            "type" : "keyword"
+          },
+          "ssqy" : {
+            "type" : "keyword"
+          },
+          "stat" : {
+            "type" : "keyword"
+          },
+          "tsdengji" : {
+            "type" : "keyword"
+          },
+          "wangongfknr" : {
+            "type" : "keyword"
+          },
+          "wcsj" : {
+            "type" : "keyword"
+          },
+          "weidu" : {
+            "type" : "keyword"
+          },
+          "wwsl" : {
+            "type" : "long"
+          },
+          "wxren" : {
+            "type" : "keyword"
+          },
+          "wxrenid" : {
+            "type" : "keyword"
+          },
+          "wxshul" : {
+            "type" : "long"
+          },
+          "wxwdmc" : {
+            "type" : "keyword"
+          },
+          "wxwdno" : {
+            "type" : "keyword"
+          },
+          "xian" : {
+            "type" : "keyword"
+          },
+          "xianid" : {
+            "type" : "keyword"
+          },
+          "xjwdmc" : {
+            "type" : "keyword"
+          },
+          "xjwdno" : {
+            "type" : "keyword"
+          },
+          "xjwdsj" : {
+            "type" : "keyword"
+          },
+          "xqxiaolei" : {
+            "type" : "keyword"
+          },
+          "xsdh" : {
+            "type" : "keyword"
+          },
+          "xsorsh" : {
+            "type" : "keyword"
+          },
+          "xswdmc" : {
+            "type" : "keyword"
+          },
+          "xswdno" : {
+            "type" : "keyword"
+          },
+          "xxlb" : {
+            "type" : "keyword"
+          },
+          "xxlbid" : {
+            "type" : "keyword"
+          },
+          "xxly" : {
+            "type" : "keyword"
+          },
+          "xxlyid" : {
+            "type" : "keyword"
+          },
+          "xxqd" : {
+            "type" : "keyword"
+          },
+          "xxqdid" : {
+            "type" : "keyword"
+          },
+          "xzhen" : {
+            "type" : "keyword"
+          },
+          "yddh" : {
+            "type" : "keyword"
+          },
+          "yddh2" : {
+            "type" : "keyword"
+          },
+          "yhgyhf" : {
+            "type" : "long"
+          },
+          "yhif" : {
+            "type" : "keyword"
+          },
+          "yhmc" : {
+            "type" : "keyword"
+          },
+          "yhqwsmsj" : {
+            "type" : "keyword"
+          },
+          "yhsx" : {
+            "type" : "keyword"
+          },
+          "yhsxid" : {
+            "type" : "keyword"
+          },
+          "yhyyczsj" : {
+            "type" : "keyword"
+          },
+          "yqwangongtime" : {
+            "type" : "keyword"
+          },
+          "yxji" : {
+            "type" : "keyword"
+          },
+          "zbby" : {
+            "type" : "keyword"
+          },
+          "zixinxishu" : {
+            "type" : "keyword"
+          },
+          "zjczsj" : {
+            "type" : "keyword"
+          },
+          "zjczwd" : {
+            "type" : "keyword"
+          },
+          "zjczwdxtbh" : {
+            "type" : "keyword"
+          },
+          "zptype" : {
+            "type" : "keyword"
+          },
+          "zxhao" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+}

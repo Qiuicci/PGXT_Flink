@@ -1,0 +1,636 @@
+
+
+  PUT azkb_max_big_kuanbiao_t1
+  {
+    "aliases" : {
+      "azkb_max_big_kuanbiao" : { }
+    },  
+	"settings": {
+    "index": {
+      "refresh_interval": "100ms",
+	  "max_result_window":10000000,
+      "number_of_shards" : "12",
+      "number_of_replicas" : "1",
+      "search.slowlog.threshold.query.warn": "5s",
+      "search.slowlog.threshold.query.info": "1s",
+      "search.slowlog.threshold.fetch.warn": "1s",
+      "search.slowlog.threshold.fetch.info": "800ms",
+      "indexing.slowlog.threshold.index.warn": "12s",
+      "indexing.slowlog.threshold.index.info": "5s"
+    }
+  },
+   "mappings" : {
+      "_doc" : {
+        "properties" : {
+          "appointmentjssj" : {
+            "type" : "keyword"
+          },
+          "appointmentkssj" : {
+            "type" : "keyword"
+          },
+          "azren" : {
+            "type" : "keyword"
+          },
+          "azrenid" : {
+            "type" : "keyword"
+          },
+          "azsl" : {
+            "type" : "integer"
+          },
+          "azwdmc" : {
+            "type" : "keyword"
+          },
+          "azwdno" : {
+            "type" : "keyword"
+          },
+          "azwdxtbh" : {
+            "type" : "keyword"
+          },
+          "beiz" : {
+            "type" : "keyword"
+          },
+          "bjustat" : {
+            "type" : "integer"
+          },
+          "cjdt" : {
+            "type" : "keyword"
+          },
+          "cjren" : {
+            "type" : "keyword"
+          },
+          "cjrmc" : {
+            "type" : "keyword"
+          },
+          "cjwdno" : {
+            "type" : "keyword"
+          },
+          "cjwdxtbh" : {
+            "type" : "keyword"
+          },
+          "created_by" : {
+            "type" : "keyword"
+          },
+          "created_date" : {
+            "type" : "keyword"
+          },
+          "cshi" : {
+            "type" : "keyword"
+          },
+          "cshiid" : {
+            "type" : "keyword"
+          },
+          "dhhm" : {
+            "type" : "keyword"
+          },
+          "dizi" : {
+            "type" : "keyword"
+          },
+          "djlxno" : {
+            "type" : "keyword"
+          },
+          "dqjd" : {
+            "type" : "keyword"
+          },
+          "dqjdsj" : {
+            "type" : "keyword"
+          },
+          "email" : {
+            "type" : "keyword"
+          },
+          "extendfiled1" : {
+            "type" : "keyword"
+          },
+          "extendfiled2" : {
+            "type" : "keyword"
+          },
+          "extendfiled3" : {
+            "type" : "keyword"
+          },
+          "extendfiled4" : {
+            "type" : "keyword"
+          },
+          "extendfiled5" : {
+            "type" : "keyword"
+          },
+          "fjhm" : {
+            "type" : "keyword"
+          },
+          "fphm" : {
+            "type" : "keyword"
+          },
+          "gcbh" : {
+            "type" : "keyword"
+          },
+          "gcmc" : {
+            "type" : "keyword"
+          },
+          "gdhao" : {
+            "type" : "keyword"
+          },
+          "gmsj" : {
+            "type" : "keyword"
+          },
+          "gpsdzxx" : {
+            "type" : "keyword"
+          },
+          "jindu" : {
+            "type" : "keyword"
+          },
+          "jspgwdmc" : {
+            "type" : "keyword"
+          },
+          "jspgwdno" : {
+            "type" : "keyword"
+          },
+          "jspgwdsj" : {
+            "type" : "keyword"
+          },
+          "jspgwdxtbh" : {
+            "type" : "keyword"
+          },
+          "kqbh" : {
+            "type" : "keyword"
+          },
+          "last_modified_by" : {
+            "type" : "keyword"
+          },
+          "last_modified_date" : {
+            "type" : "keyword"
+          },
+          "lcid" : {
+            "type" : "keyword"
+          },
+          "level1" : {
+            "type" : "keyword"
+          },
+          "level10" : {
+            "type" : "keyword"
+          },
+          "level11" : {
+            "type" : "keyword"
+          },
+          "level12" : {
+            "type" : "keyword"
+          },
+          "level13" : {
+            "type" : "keyword"
+          },
+          "level14" : {
+            "type" : "keyword"
+          },
+          "level2" : {
+            "type" : "keyword"
+          },
+          "level3" : {
+            "type" : "keyword"
+          },
+          "level4" : {
+            "type" : "keyword"
+          },
+          "level5" : {
+            "type" : "keyword"
+          },
+          "level6" : {
+            "type" : "keyword"
+          },
+          "level7" : {
+            "type" : "keyword"
+          },
+          "level8" : {
+            "type" : "keyword"
+          },
+          "level9" : {
+            "type" : "keyword"
+          },
+          "lxren" : {
+            "type" : "keyword"
+          },
+          "orderphone" : {
+            "type" : "keyword"
+          },
+          "pgguid" : {
+            "type" : "keyword"
+          },
+          "pgid" : {
+            "type" : "keyword"
+          },
+          "qqlymc" : {
+            "type" : "keyword"
+          },
+          "qqlyno" : {
+            "type" : "keyword"
+          },
+          "qqlyxh" : {
+            "type" : "keyword"
+          },
+          "qqlyzj" : {
+            "type" : "keyword"
+          },
+          "quhao" : {
+            "type" : "keyword"
+          },
+          "retailsign" : {
+            "type" : "integer"
+          },
+          "servicewdmc" : {
+            "type" : "keyword"
+          },
+          "servicewdno" : {
+            "type" : "keyword"
+          },
+          "sfen" : {
+            "type" : "keyword"
+          },
+          "sfenid" : {
+            "type" : "keyword"
+          },
+          "sfwcps" : {
+            "type" : "keyword"
+          },
+          "sfygllc" : {
+            "type" : "integer"
+          },
+          "shopname" : {
+            "type" : "keyword"
+          },
+          "shopno" : {
+            "type" : "keyword"
+          },
+          "shsj" : {
+            "type" : "keyword"
+          },
+          "spid" : {
+            "type" : "keyword"
+          },
+          "spmc" : {
+            "type" : "keyword"
+          },
+          "ssqy" : {
+            "type" : "keyword"
+          },
+          "stat" : {
+            "type" : "integer"
+          },
+          "syjd" : {
+            "type" : "keyword"
+          },
+          "tbl_Az_Assign_Appointment" : {
+            "type" : "nested",
+            "properties" : {
+              "beiz" : {
+                "type" : "keyword"
+              },
+              "created_by" : {
+                "type" : "keyword"
+              },
+              "created_date" : {
+                "type" : "keyword"
+              },
+              "czren" : {
+                "type" : "keyword"
+              },
+              "czsj" : {
+                "type" : "keyword"
+              },
+              "id" : {
+                "type" : "keyword"
+              },
+              "jssj" : {
+                "type" : "keyword"
+              },
+              "kssj" : {
+                "type" : "keyword"
+              },
+              "last_modified_by" : {
+                "type" : "keyword"
+              },
+              "last_modified_date" : {
+                "type" : "keyword"
+              },
+              "leix" : {
+                "type" : "keyword"
+              },
+              "pgguid" : {
+                "type" : "keyword"
+              },
+              "reason" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "tbl_Az_Assign_Fkmx" : {
+            "type" : "nested",
+            "properties" : {
+              "cjdt" : {
+                "type" : "keyword"
+              },
+              "created_by" : {
+                "type" : "keyword"
+              },
+              "created_date" : {
+                "type" : "keyword"
+              },
+              "fkid" : {
+                "type" : "keyword"
+              },
+              "fkjg" : {
+                "type" : "keyword"
+              },
+              "fklb" : {
+                "type" : "keyword"
+              },
+              "fknr" : {
+                "type" : "keyword"
+              },
+              "fkren" : {
+                "type" : "keyword"
+              },
+              "fkrenmc" : {
+                "type" : "keyword"
+              },
+              "fksj" : {
+                "type" : "keyword"
+              },
+              "last_modified_by" : {
+                "type" : "keyword"
+              },
+              "last_modified_date" : {
+                "type" : "keyword"
+              },
+              "pgguid" : {
+                "type" : "keyword"
+              },
+              "wdmc" : {
+                "type" : "keyword"
+              },
+              "wdno" : {
+                "type" : "keyword"
+              },
+              "xtwdbh" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "tbl_Az_Assign_Mx" : {
+            "type" : "nested",
+            "properties" : {
+              "beiz" : {
+                "type" : "keyword"
+              },
+              "cjdt" : {
+                "type" : "keyword"
+              },
+              "created_by" : {
+                "type" : "keyword"
+              },
+              "created_date" : {
+                "type" : "keyword"
+              },
+              "czren" : {
+                "type" : "keyword"
+              },
+              "czsj" : {
+                "type" : "keyword"
+              },
+              "czwd" : {
+                "type" : "keyword"
+              },
+              "danw" : {
+                "type" : "keyword"
+              },
+              "jiage" : {
+                "type" : "keyword"
+              },
+              "jxmc" : {
+                "type" : "keyword"
+              },
+              "jxno" : {
+                "type" : "keyword"
+              },
+              "last_modified_by" : {
+                "type" : "keyword"
+              },
+              "last_modified_date" : {
+                "type" : "keyword"
+              },
+              "njsl" : {
+                "type" : "keyword"
+              },
+              "njtm" : {
+                "type" : "keyword"
+              },
+              "njtm2" : {
+                "type" : "keyword"
+              },
+              "pgguid" : {
+                "type" : "keyword"
+              },
+              "pgmxid" : {
+                "type" : "keyword"
+              },
+              "shul" : {
+                "type" : "keyword"
+              },
+              "spid" : {
+                "type" : "keyword"
+              },
+              "spmc" : {
+                "type" : "keyword"
+              },
+              "wjsl" : {
+                "type" : "keyword"
+              },
+              "wjtm" : {
+                "type" : "keyword"
+              },
+              "wldm" : {
+                "type" : "keyword"
+              },
+              "wwsl" : {
+                "type" : "keyword"
+              },
+              "xiid" : {
+                "type" : "keyword"
+              },
+              "ximc" : {
+                "type" : "keyword"
+              },
+              "xlid" : {
+                "type" : "keyword"
+              },
+              "xlmc" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "tbl_Az_Assign_Satisfaction" : {
+            "type" : "nested",
+            "properties" : {
+              "bmybeiz" : {
+                "type" : "keyword"
+              },
+              "bmylx" : {
+                "type" : "keyword"
+              },
+              "bmysj" : {
+                "type" : "keyword"
+              },
+              "created_by" : {
+                "type" : "keyword"
+              },
+              "created_date" : {
+                "type" : "keyword"
+              },
+              "hfren" : {
+                "type" : "keyword"
+              },
+              "hfsj" : {
+                "type" : "keyword"
+              },
+              "hfwdmc" : {
+                "type" : "keyword"
+              },
+              "hfwdno" : {
+                "type" : "keyword"
+              },
+              "id" : {
+                "type" : "keyword"
+              },
+              "last_modified_by" : {
+                "type" : "keyword"
+              },
+              "last_modified_date" : {
+                "type" : "keyword"
+              },
+              "mydlx" : {
+                "type" : "keyword"
+              },
+              "pgguid" : {
+                "type" : "keyword"
+              },
+              "pjly" : {
+                "type" : "keyword"
+              },
+              "pjnr" : {
+                "type" : "keyword"
+              },
+              "splb" : {
+                "type" : "keyword"
+              },
+              "sxlx" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "wcsj" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "weidu" : {
+            "type" : "keyword"
+          },
+          "wwsl" : {
+            "type" : "integer"
+          },
+          "xian" : {
+            "type" : "keyword"
+          },
+          "xianid" : {
+            "type" : "keyword"
+          },
+          "xsdh" : {
+            "type" : "keyword"
+          },
+          "xsdwno" : {
+            "type" : "keyword"
+          },
+          "xsdwxtbh" : {
+            "type" : "keyword"
+          },
+          "xslx" : {
+            "type" : "keyword"
+          },
+          "xslxid" : {
+            "type" : "keyword"
+          },
+          "xsorsh" : {
+            "type" : "integer"
+          },
+          "xswdmc" : {
+            "type" : "keyword"
+          },
+          "xxlb" : {
+            "type" : "keyword"
+          },
+          "xxlbid" : {
+            "type" : "keyword"
+          },
+          "xxly" : {
+            "type" : "keyword"
+          },
+          "xxlyid" : {
+            "type" : "keyword"
+          },
+          "xxqd" : {
+            "type" : "keyword"
+          },
+          "xzhen" : {
+            "type" : "keyword"
+          },
+          "xzhenid" : {
+            "type" : "keyword"
+          },
+          "yddh" : {
+            "type" : "keyword"
+          },
+          "yddh2" : {
+            "type" : "keyword"
+          },
+          "yhmc" : {
+            "type" : "keyword"
+          },
+          "yhqwjssj" : {
+            "type" : "keyword"
+          },
+          "yhqwkssj" : {
+            "type" : "keyword"
+          },
+          "yhsx" : {
+            "type" : "keyword"
+          },
+          "yhsxid" : {
+            "type" : "keyword"
+          },
+          "yqwangongtime" : {
+            "type" : "keyword"
+          },
+          "yxji" : {
+            "type" : "keyword"
+          },
+          "yyazsj" : {
+            "type" : "keyword"
+          },
+          "zjczren" : {
+            "type" : "keyword"
+          },
+          "zjczsj" : {
+            "type" : "keyword"
+          },
+          "zjczwd" : {
+            "type" : "keyword"
+          },
+          "zjczwdxtbh" : {
+            "type" : "keyword"
+          },
+          "zxha" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+}

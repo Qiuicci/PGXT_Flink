@@ -1,0 +1,123 @@
+
+
+  PUT default_server_greeshinstall_tbl_az_assign_mx_t1
+  {
+    "aliases" : {
+      "default_server_greeshinstall_tbl_az_assign_mx" : { }
+    },  
+	"settings": {
+    "index": {
+      "refresh_interval": "100ms",
+	  "max_result_window":10000000,
+      "number_of_shards" : "12",
+      "number_of_replicas" : "1",
+      "search.slowlog.threshold.query.warn": "5s",
+      "search.slowlog.threshold.query.info": "1s",
+      "search.slowlog.threshold.fetch.warn": "1s",
+      "search.slowlog.threshold.fetch.info": "800ms",
+      "indexing.slowlog.threshold.index.warn": "12s",
+      "indexing.slowlog.threshold.index.info": "5s"
+    }
+  },
+   "mappings" : {
+      "_doc" : {
+        "properties" : {
+          "beiz" : {
+            "type" : "keyword"
+          },
+          "cjdt" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+          },
+          "created_by" : {
+            "type" : "keyword"
+          },
+          "created_date" : {
+            "type" : "keyword"
+          },
+          "czren" : {
+            "type" : "keyword"
+          },
+          "czsj" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+          },
+          "czwd" : {
+            "type" : "keyword"
+          },
+          "danw" : {
+            "type" : "keyword"
+          },
+          "jiage" : {
+            "type" : "double"
+          },
+          "jxmc" : {
+            "type" : "keyword"
+          },
+          "jxno" : {
+            "type" : "keyword"
+          },
+          "last_modified_by" : {
+            "type" : "keyword"
+          },
+          "last_modified_date" : {
+            "type" : "keyword"
+          },
+          "njsl" : {
+            "type" : "keyword"
+          },
+          "njtm" : {
+            "type" : "keyword"
+          },
+          "njtm2" : {
+            "type" : "integer"
+          },
+          "pgguid" : {
+            "type" : "keyword"
+          },
+          "pgmxid" : {
+            "type" : "keyword"
+          },
+          "shul" : {
+            "type" : "integer"
+          },
+          "spid" : {
+            "type" : "keyword"
+          },
+          "spmc" : {
+            "type" : "keyword"
+          },
+          "wjsl" : {
+            "type" : "integer"
+          },
+          "wjtm" : {
+            "type" : "keyword"
+          },
+          "wldm" : {
+            "type" : "keyword"
+          },
+          "wwsl" : {
+            "type" : "integer"
+          },
+          "xiid" : {
+            "type" : "keyword"
+          },
+          "ximc" : {
+            "type" : "keyword"
+          },
+          "xlid" : {
+            "type" : "keyword"
+          },
+          "xlmc" : {
+            "type" : "keyword"
+          },
+          "ts" : {
+            "type" : "keyword"
+          },
+          "table" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+}

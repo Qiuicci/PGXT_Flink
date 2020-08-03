@@ -1,0 +1,33 @@
+package com.gree.model
+
+case class TblWangdianSjdwmx(
+                                 id	: String,
+                                 created_by	: String,
+                                 created_date	: String,
+                                 last_modified_by	: String,
+                                 last_modified_date	: String,
+                                 xhid : String,
+                                 xtwdbh : String ,
+                                 wdno: String ,
+                                splb: String ,
+                                scqy: String ,
+                                fwlb: String ,
+                                sjwdno: String ,
+                                sjwdmc: String ,
+                                sjwdxtbh: String,
+                                cxqyfw: String,
+                                stat: String,
+                                czren: String,
+                                czrmc: String,
+                                czsj: String,
+                                zhczsj: String,
+                                cxqyfwbh: String,
+                                sfxyzq: String,
+                                sfxyzqbak: String,
+                                seno: String,
+                                leix: String,
+                                wdmc: String,
+                                spmc: String,
+                                scqymc: String,
+                                 caoZuoType:String
+)

@@ -1,0 +1,112 @@
+
+
+  PUT app_greeshmasterdata_tbl_wangdian_sjdwmx_t1
+  {
+    "aliases" : {
+      "app_greeshmasterdata_tbl_wangdian_sjdwmx" : { }
+    },  
+	"settings": {
+    "index": {
+      "refresh_interval": "100ms",
+	  "max_result_window":10000000,
+      "number_of_shards" : "12",
+      "number_of_replicas" : "1",
+      "search.slowlog.threshold.query.warn": "5s",
+      "search.slowlog.threshold.query.info": "1s",
+      "search.slowlog.threshold.fetch.warn": "1s",
+      "search.slowlog.threshold.fetch.info": "800ms",
+      "indexing.slowlog.threshold.index.warn": "12s",
+      "indexing.slowlog.threshold.index.info": "5s"
+    }
+  },
+   "mappings" : {
+      "_doc" : {
+        "properties" : {
+          "created_by" : {
+            "type" : "keyword"
+          },
+          "created_date" : {
+            "type" : "keyword"
+          },
+          "cxqyfw" : {
+            "type" : "keyword"
+          },
+          "cxqyfwbh" : {
+            "type" : "keyword"
+          },
+          "czren" : {
+            "type" : "keyword"
+          },
+          "czrmc" : {
+            "type" : "keyword"
+          },
+          "czsj" : {
+            "type" : "keyword"
+          },
+          "fwlb" : {
+            "type" : "keyword"
+          },
+          "id" : {
+            "type" : "keyword"
+          },
+          "last_modified_by" : {
+            "type" : "keyword"
+          },
+          "last_modified_date" : {
+            "type" : "keyword"
+          },
+          "leix" : {
+            "type" : "long"
+          },
+          "scqy" : {
+            "type" : "keyword"
+          },
+          "scqymc" : {
+            "type" : "keyword"
+          },
+          "seno" : {
+            "type" : "long"
+          },
+          "sfxyzq" : {
+            "type" : "keyword"
+          },
+          "sfxyzqbak" : {
+            "type" : "keyword"
+          },
+          "sjwdmc" : {
+            "type" : "keyword"
+          },
+          "sjwdno" : {
+            "type" : "keyword"
+          },
+          "sjwdxtbh" : {
+            "type" : "keyword"
+          },
+          "splb" : {
+            "type" : "integer"
+          },
+          "spmc" : {
+            "type" : "keyword"
+          },
+          "stat" : {
+            "type" : "integer"
+          },
+          "wdmc" : {
+            "type" : "keyword"
+          },
+          "wdno" : {
+            "type" : "keyword"
+          },
+          "xhid" : {
+            "type" : "long"
+          },
+          "xtwdbh" : {
+            "type" : "keyword"
+          },
+          "zhczsj" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+}
