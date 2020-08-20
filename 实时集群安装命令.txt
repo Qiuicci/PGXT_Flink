@@ -1,0 +1,128 @@
+######################## JDK ###################
+
+scp jdk-8u231-linux-x64.tar.gz flink@flink4:/home/flink/opt/soft
+scp jdk-8u231-linux-x64.tar.gz flink@flink5:/home/flink/opt/soft
+scp jdk-8u231-linux-x64.tar.gz flink@flink6:/home/flink/opt/soft
+
+rpm -qa | grep jdk
+yum -y remove copy-jdk-configs-3.3-10.el7_5.noarch
+
+cd /home/flink/opt/soft
+tar -zxvf jdk-8u231-linux-x64.tar.gz -C /opt
+
+vim /etc/profile
+
+export JAVA_HOME=/opt/jdk1.8.0_231/
+export CLASSPATH=$:CLASSPATH:$JAVA_HOME/bin/
+export PATH=$PATH:$JAVA_HOME/bin/
+
+source /etc/profile
+
+chown -R root:root jdk1.8.0_231
+
+######################## Mysql ###################
+rpm -qa | grep mariadb
+rpm -ivh .....
+##初始化
+mysqld --initialize-insecure
+
+systemctl start mysqld.service
+systemctl status mysqld.service
+
+set password=password('')
+mysql uroot -p
+
+######################## Zookeeper ###################
+##发送文件
+scp -r /home/flink/opt/module/zookeeper-3.4.10 flink@flink2:/home/flink/opt/module/
+##修改dataDir
+server.61=flink1:2888:3888
+server.62=flink2:2888:3888
+server.63=flink3:2888:3888
+
+touch /home/flink/opt/module/zookeeper-3.4.10/zkdata/myid
+61
+##启动集群
+ ./zkServer.sh start
+ 
+ ######################## Canal ###################
+mysql -u root -p
+
+##创建默认canal_manager数据库
+source canal_manager.sql
+
+##创建canal用户，分配权限
+
+##slave
+tar -zxvf ./soft/canal.deployer-1.1.4.tar.gz -C /home/flink/opt/module/
+
+
+
+######################## Hadoop ###################
+ssh-keygen -t rsa
+ssh-copy-id flink1
+
+##core_site.xml
+<configuration>
+        <property>
+                <name>fs.defaultFS</name>
+                <value>hdfs://flink1:9000</value>
+        </property>
+        <property>
+                <name>hadoop.tmp.dir</name>
+                <value>/home/flink/opt/module/hadoop-2.8.3/data/tmp</value>
+        </property>
+</configuration>
+
+##hdfs-site.xml
+<configuration>
+        <property>
+                <name>dfs.replication</name>
+                <value>3</value>
+        </property>
+        <property>
+                <name>dfs.namenode.secondary.http-address</name>
+                <value>flink2:50090</value>
+        </property>
+</configuration>
+
+export HADOOP_HOME=/home/flink/opt/module/hadoop-2.8.3
+export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
+
+##初始化hdfs
+hadoop namenode -format
+
+start-dfs.sh
+
+
+######################## Flink ###################
+##flink-conf.yaml
+##slaves
+##masters
+
+
+######################## Elasticsearch ###################
+
+unzip -o -d ./module/ ./soft/elasticsearch-sql-6.8.3.0.zip
+-o：不提示情况下覆盖文件
+-d：-d ./module/解压到module文件夹
+##elasticsearch.yml
+##jvm.options
+
+vim /etc/security/limits.conf
+
+root soft nofile 65535
+root hard nofile 65535
+* soft nofile 65535
+* hard nofile 65535
+* hard memlock unlimited
+* soft memlock unlimited
+
+ulimit -n 65535  ##生效
+ulimit -a   ##查看
+
+vim /etc/sysctl.conf
+sysctl -p  ##生效
+
+./elasticsearch -d   ##后台运行
+
